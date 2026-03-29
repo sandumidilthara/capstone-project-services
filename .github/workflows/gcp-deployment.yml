@@ -59,11 +59,9 @@ jobs:
 
       - name: Update the instance group with new image
         run: |
-              gcloud compute instance-groups managed rolling-action start-update ${{ env.INSTANCE_GROUP }} \
+              gcloud compute instance-groups managed rolling-action replace ${{ env.INSTANCE_GROUP }} \
               --region=${{ env.REGION }} \
-              --type=proactive \
               --max-unavailable=0 \
-              --minimal-action=replace \
               --replacement-method=substitute \
               --max-surge=3 \
               --version=template=projects/${{ secrets.GCP_PROJECT_ID }}/regions/${{ env.REGION }}/instanceTemplates/${{ env.INSTANCE_TEMPLATE }},name=0-1774779740883
