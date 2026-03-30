@@ -8,7 +8,7 @@ jobs:
     env:
       VM_NAME: vm-services-seed
       INSTANCE_GROUP: mig-services
-      INSTANCE_TEMPLATE: tmp-vm-services-seed-v1
+      INSTANCE_TEMPLATE: tmp-vm-services-seed-v2
       REGION: asia-southeast1
       ZONE: asia-southeast1-a
       USER_NAME: bestwayconsultancy2025
